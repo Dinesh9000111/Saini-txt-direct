@@ -311,7 +311,7 @@ async def send_logs(client: Client, m: Message):  # Correct parameter name
 
 @bot.on_message(filters.command(["moon"]) )
 async def txt_handler(bot: Client, m: Message):
-    editable = await m.reply_text(f"`🔹Hi I am Poweful TXT Downloader📥 Bot.\n🔹Send me the txt file and wait.`")
+    editable = await m.reply_text(f"`Send me the txt file and wait.`")
     input: Message = await bot.listen(editable.chat.id)
     y = await input.download()
     await input.delete(True)
