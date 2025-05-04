@@ -309,7 +309,7 @@ async def send_logs(client: Client, m: Message):  # Correct parameter name
     except Exception as e:
         await m.reply_text(f"Error sending logs: {e}")
 
-@bot.on_message(filters.command(["drm"]) )
+@bot.on_message(filters.command(["moon"]) )
 async def txt_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"`🔹Hi I am Poweful TXT Downloader📥 Bot.\n🔹Send me the txt file and wait.`")
     input: Message = await bot.listen(editable.chat.id)
@@ -385,6 +385,10 @@ async def txt_handler(bot: Client, m: Message):
             res = "1280x720"
         elif raw_text2 == "1080":
             res = "1920x1080" 
+        elif raw_text2 == "1440":
+            res = "2560x1440"  # 2K
+       elif raw_text2 == "2160":
+            res = "3840x2160"  # 4K
         else: 
             res = "UN"
     except Exception:
@@ -471,7 +475,7 @@ async def txt_handler(bot: Client, m: Message):
             elif "d1d34p8vz63oiq" in url or "sec1.pw.live" in url:
                 vid_id =  url.split('/')[-2]
                 #url = f"https://pwplayer-38c1ae95b681.herokuapp.com/pw?url={url}&token={raw_text4}"
-                url = f"https://anonymouspwplayer-b99f57957198.herokuapp.com/pw?url={url}?token={raw_text4}"
+                url = f"https://pwplayer-38c1ae95b681.herokuapp.com/pw?url={url}?token={raw_text4}"
                 #url =  f"{api_url}pw-dl?url={url}&token={raw_text4}&authorization={api_token}&q={raw_text2}"
                 #url = f"https://dl.alphacbse.site/download/{vid_id}/master.m3u8"
 
@@ -501,7 +505,7 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'**——— ✦ {str(count).zfill(3)} ✦ ———**\n\n**Title:** `{name1} `\n\n**Batch:** `{b_name}`\n\n**📥 Downloaded By:** {CR}'
+                cc = f'**——— ✦ {str(count).zfill(3)} ✦ ———**\n\n**Index:** `{name1} `\n\n**Batch:** `{b_name}`\n\n**📥 Downloaded By:** {CR}'
                 cc1 = f'**——— ✦ {str(count).zfill(3)} ✦ ———**\n\n**Index:** `{name1} .pdf`\n\n**Batch:** `{b_name}`\n\n**📥 Downloaded By:** {CR}'
                 cczip = f'**——— ✦ {str(count).zfill(3)} ✦ ———**\n\n**Index:** `{name1} .zip`\n\n**Batch:** `{b_name}`\n\n**📥 Downloaded By:** {CR}'
                 ccimg = f'**——— ✦ {str(count).zfill(3)} ✦ ———**\n\n**Index:** `{name1} .jpg`\n\n**Batch:** `{b_name}`\n\n**📥 Downloaded By:** {CR}'
