@@ -63,12 +63,12 @@ async def show_random_emojis(message):
     return emoji_message
 
 # Inline keyboard for start command
-BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/Dinc05")]])
+BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/dinc05")]])
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="📞 Contact", url="https://t.me/Dinc05"),
-            InlineKeyboardButton(text="🛠️ Help", url="https://t.m/dinc05"),
+            InlineKeyboardButton(text="📞 Contact", url="https://t.me/dinc05"),
+            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/dinc05"),
         ],
     ]
 )
@@ -501,7 +501,7 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'**——— ✦ {str(count).zfill(3)} ✦ ———**\n\n**Title:** `{name1} [{res}] .mp4`\n\n**Batch:** `{b_name}`\n\n**📥 Downloaded By:** {CR}'
+                cc = f'**——— ✦ {str(count).zfill(3)} ✦ ———**\n\n**Title:** `{name1} `\n\n**Batch:** `{b_name}`\n\n**📥 Downloaded By:** {CR}'
                 cc1 = f'**——— ✦ {str(count).zfill(3)} ✦ ———**\n\n**Index:** `{name1} .pdf`\n\n**Batch:** `{b_name}`\n\n**📥 Downloaded By:** {CR}'
                 cczip = f'**——— ✦ {str(count).zfill(3)} ✦ ———**\n\n**Index:** `{name1} .zip`\n\n**Batch:** `{b_name}`\n\n**📥 Downloaded By:** {CR}'
                 ccimg = f'**——— ✦ {str(count).zfill(3)} ✦ ———**\n\n**Index:** `{name1} .jpg`\n\n**Batch:** `{b_name}`\n\n**📥 Downloaded By:** {CR}'
