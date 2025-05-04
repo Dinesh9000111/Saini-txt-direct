@@ -387,8 +387,6 @@ async def txt_handler(bot: Client, m: Message):
             res = "1920x1080" 
         elif raw_text2 == "1440":
             res = "2560x1440"  # 2K
-       elif raw_text2 == "2160":
-            res = "3840x2160"  # 4K
         else: 
             res = "UN"
     except Exception:
